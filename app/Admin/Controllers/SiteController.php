@@ -79,6 +79,7 @@ class SiteController extends Controller
     {
         $grid = new Grid(new Site);
 
+        $grid->model()->orderBy('id', 'desc');
         $grid->id('ID');
         $grid->category()->title('分类');
         $grid->title('标题');
