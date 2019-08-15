@@ -141,7 +141,7 @@ class SiteController extends Controller
         $form->image('thumb', '图标')
             ->crop(120, 120)
             ->uniqueName()
-            ->rules('required');
+            ->rules('nullable');
         $form->text('describe', '描述')
             ->attribute('autocomplete', 'off')
             ->rules('required|max:300');
